@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.swipehappy.ui.theme.SwipeHappyTheme
 
+//This doc is for the main login screen
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +41,7 @@ fun loginDetails() {
 
         //Handles Website logo section
         Column {
+            //My website logo
             Image(
                 painter = painterResource(id = R.drawable.logo),
                 contentDescription = "Swipe Happy logo",
