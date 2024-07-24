@@ -20,11 +20,7 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        TODO("Not yet implemented")
-    }
-
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+        getDatabase()
     }
 
     fun getDatabase(): SQLiteDatabase {
@@ -41,18 +37,5 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
         input.close()
         return SQLiteDatabase.openDatabase("/data/data/${mContext.packageName}/databases/$mDbName",null,SQLiteDatabase.OPEN_READWRITE)
     }
-
-    //Variables for handling Users table
-    //public var user_id,
-    //public var f_name,
-    //public var l_name,
-    //public var dob,
-    //public var email,
-    //public var phone_no,
-    //public var password,
-    //public var bio,
-    //public var gender,
-    //public var country,
-    //public var city,
 
 }

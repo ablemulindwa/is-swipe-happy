@@ -26,11 +26,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            loginDetails()
+            Register1()
         }
     }
 }
 
+//Code for the login screen
 @Composable
 fun loginDetails() {
 
@@ -94,4 +95,70 @@ fun loginDetails() {
         }
     }
 
+}
+
+@Preview (showBackground = true)
+//Code for the first registration screen
+@Composable
+fun Register1(){
+
+    //First name
+    Column {
+        Text("Enter your first name")
+
+        //Variable for first name
+        var f_name by remember {
+            mutableStateOf("")
+        }
+
+        //collect user input
+        TextField(
+            value = f_name,
+            onValueChange = {f_name = it}
+        )
+    }
+
+    //Last name
+    Column {
+        Text("Enter your last name")
+
+        //Variable for first name
+        var l_name by remember {
+            mutableStateOf("")
+        }
+
+        //collect user input
+        TextField(
+            value = l_name,
+            onValueChange = {l_name = it}
+        )
+    }
+
+    //Last name
+    Column {
+        Text("Email address")
+
+        //Variable for first name
+        var email by remember {
+            mutableStateOf("")
+        }
+
+        //collect user input
+        TextField(
+            value = l_name,
+            onValueChange = {l_name = it}
+        )
+    }
+
+
+    Text("Phone number")
+    Text("Gender")
+    Text("Date of Birth")
+    Text("Country")
+    Text("City")
+
+    //Button to navigate to the next registration section
+    Button(onClick = { /*TODO*/ }) {
+        Text(text = "Next")
+    }
 }
