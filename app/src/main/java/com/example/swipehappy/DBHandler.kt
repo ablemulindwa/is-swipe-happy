@@ -23,6 +23,10 @@ class DBHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
         getDatabase()
     }
 
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        TODO("Not yet implemented")
+    }
+
     fun getDatabase(): SQLiteDatabase {
         val assetManager: AssetManager = mContext.assets
         val input: InputStream = assetManager.open(mDbName)
