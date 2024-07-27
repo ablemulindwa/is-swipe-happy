@@ -1,4 +1,4 @@
-package com.example.swipehappy
+package com.example.swipehappy.com.example.swipehappy
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.swipehappy.R
 
 //TODO: Make the screens go to different files?
 // Idk, find a way to use inheritance to make the app's code more abstracted and clearer.
